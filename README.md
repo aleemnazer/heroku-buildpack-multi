@@ -1,13 +1,25 @@
-# Deprecated
+Usage
 
-This project is deprecated and is no longer being maintained.
+To use this buildpack, you should prepare .buildpacks file that contains this buildpack url and your real buildpack url.
 
-Please fork it to your own account and update your `BUILDPACK_URL`
+$ ls
+.buildpacks
+...
+
+$ cat .buildpacks
+https://github.com/aleemnazer/heroku-buildpack-multi
+https://github.com/heroku/heroku-buildpack-play
+
+$ heroku buildpacks:set https://github.com/aleemnazer/heroku-buildpack-multi
+
+$ git push heroku master
+...
+
+You can verify installing ffmpeg by following command.
+
+$ heroku run "ffmpeg -version"
+
+
+For more details about multiple buildpacks
 
 You can also check out Heroku's [built-in buildpack-multi support](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
-
-Cloud Foundry users, amongst others, may wish to use a community-maintained and
-actively developed version of this buildpack, available at
-https://bitbucket.org/cf-utilities/cf-buildpack-multi/
-
-Please check out my current project [Convox](https://convox.com) for all of your deployment needs!
