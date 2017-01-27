@@ -10,7 +10,7 @@ $ cat .buildpacks
 https://github.com/aleemnazer/heroku-buildpack-multi
 https://github.com/heroku/heroku-buildpack-play
 
-$ heroku buildpacks:set https://github.com/aleemnazer/heroku-buildpack-multi
+$ heroku buildpacks:add https://github.com/aleemnazer/heroku-buildpack-multi
 
 $ git push heroku master
 ...
